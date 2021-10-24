@@ -1,12 +1,13 @@
 window.onload = function() {
-    const testInput1 = document.querySelector('.test1-input');
+	testExercise1();
+	testExercise2();
+	testExercise3();
+};
+
+const testExercise1 = function() {
+	const testInput1 = document.querySelector('.test1-input');
     const testSubmit1 = document.querySelector('.test1-submit');
     const testContainer1 = document.querySelector('.test1-container');
-    const testInput2 = document.querySelector('.test2-input');
-    const testSubmit2 = document.querySelector('.test2-submit');
-    const testContainer2 = document.querySelector('.test2-container');
-    const testContainer3 = document.querySelector('.test3-container');
-    const testGenerateArray = document.querySelector('.test3-generate');
     testSubmit1.addEventListener('click', (event) => {
         const result = testInput1.value;
         const resultElement = document.createElement('p');
@@ -17,6 +18,11 @@ window.onload = function() {
         	testContainer1.appendChild(resultElement);
         }
     });
+};
+const testExercise2 = function() {
+	const testInput2 = document.querySelector('.test2-input');
+    const testSubmit2 = document.querySelector('.test2-submit');
+    const testContainer2 = document.querySelector('.test2-container');
     testSubmit2.addEventListener('click', (event) => {
     	const result = testInput2.value;
     	const resultElement = document.createElement('p');
@@ -29,6 +35,10 @@ window.onload = function() {
         resultElement.appendChild(msg);
         testContainer2.appendChild(resultElement);
     });
+};
+const testExercise3 = function() {
+	const testContainer3 = document.querySelector('.test3-container');
+    const testGenerateArray = document.querySelector('.test3-generate');
     testGenerateArray.addEventListener('click', (event) => {
     	const generateRandomNubmer = function() {
     		return Math.floor(Math.random() * (100 - 1) + 1);
@@ -47,5 +57,4 @@ window.onload = function() {
     	resultElement.appendChild(randomArrayString);
     	testContainer3.appendChild(resultElement);
     });
-};
-
+}
